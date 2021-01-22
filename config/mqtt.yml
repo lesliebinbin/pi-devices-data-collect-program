@@ -1,0 +1,45 @@
+default: &default
+  topics:
+    card: 'bluetooth/beacon/card'
+    bluez: 'bluetooth/pi/bluez'
+    wifilanscan: 'wifi/lanscan'
+    wififindif: 'wifi/find3'
+    utle: 'bluetooth/ubertooth/le'
+    utcl: 'bluetooth/ubertooth/cl'
+    pi: 'query/device/pi/info'
+    beacon: 'query/device/beacon/info'
+    ubertooth_survey_result: 'query/device/ubertooth/surveyresult'
+    bluez_device_name: 'query/devicename'
+    ssh_ec2_forward: 'remote/forward/ec2'
+    kernel_info: 'info/kernel'
+    remote_command: 'pi/remote_command'
+  connection:
+    host: 'a1lj4k5or5rvza-ats.iot.ap-southeast-2.amazonaws.com'
+    port: 8883
+    ssl: true
+    cert_file: '659ad3944b-certificate.pem.crt'
+    key_file: '659ad3944b-private.pem.key'
+    ca_file: 'AmazonRootCA1.pem'
+    keep_alive: 60
+    ack_timeout: 30
+    # clean_session: false
+    # will_qos: 1
+  device:
+    id_path: '/home/pi/device-id'
+    family: '/home/pi/family'
+    device: '/home/pi/device'
+    location: '/home/pi/location'
+    area_id_path: '/home/pi/area-id'
+  network_down_folder: '/home/pi/network_down'
+  ipcs:
+    ubertooth: '/home/pi/ipcs/ubertooth-fifo'
+    trackerjacker: '/home/pi/ipcs/trackerjacker-fifo'
+
+development:
+  <<: *default
+
+test:
+  <<: *default
+
+production:
+  <<: *default

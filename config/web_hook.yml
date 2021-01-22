@@ -1,0 +1,14 @@
+default: &default
+  # url: 'https://outlook.office.com/webhook/87ce2f0e-4498-415c-a8f5-3ff214c153e5@cbfeb581-bd3a-4da7-ac21-9d17fa7cc6b3/IncomingWebhook/5b113b9645b24a539d38b42778298db9/5aef9cad-8a78-4c18-9e70-4ffe7f6bb047'
+  url: 'https://outlook.office.com/webhook/87ce2f0e-4498-415c-a8f5-3ff214c153e5@cbfeb581-bd3a-4da7-ac21-9d17fa7cc6b3/IncomingWebhook/c5bde4701a7f48a08c9bf28cb383ea9c/5aef9cad-8a78-4c18-9e70-4ffe7f6bb047'
+
+
+
+development:
+  <<: *default
+
+test:
+  <<: *default
+
+production:
+  <<: *default

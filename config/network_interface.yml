@@ -1,0 +1,13 @@
+default: &default
+  primary: 'wlan'
+  # primary: 'wlp2s'
+  scan_time: 20
+
+development:
+  <<: *default
+
+test:
+  <<: *default
+
+production:
+  <<: *default

@@ -1,0 +1,19 @@
+default: &default
+  ubertooth:
+    day: '0 5 * * *'
+    night: '0 20 * * *'
+    submit: '10s'
+    day_time: '5:00 am'
+    night_time: '8:00 pm'
+  wifi:
+    lan: '20s'
+  max_buffer_size: 250
+
+development:
+  <<: *default
+
+test:
+  <<: *default
+
+production:
+  <<: *default
